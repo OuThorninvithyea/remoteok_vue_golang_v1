@@ -1,0 +1,167 @@
+package store
+
+import (
+	"backend/model/home/logo"
+	"backend/model/home/logomenu"
+	"backend/model/home/menu"
+	"backend/model/home/salary"
+)
+
+var LogoData = logomenu.LogoMenu{
+	LogoMenu: []logo.LogoEntry{
+		{Join: "🧑‍💻 Join Remote OK", Login: "👋 Log in"},
+		{Type: "divider"},
+		{
+			Type:  "section",
+			Title: "GENERAL",
+			Items: []menu.MenuItem{
+				{CategoryItem: "🏠 Frontpage", URL: "#"},
+				{CategoryItem: "🏝️ Remote jobs", URL: "#"},
+				{CategoryItem: "🌗 Dark mode", URL: "#"},
+				{CategoryItem: "🧑‍💻 Hire remote workers", URL: "#"},
+				{CategoryItem: "📮 Post a job", URL: "#"},
+				{CategoryItem: "⭐️ Go premium", URL: "#"},
+			},
+		},
+		{Type: "divider"},
+		{
+			Type:  "section",
+			Title: "TOP JOBS",
+			Items: []menu.MenuItem{
+				{CategoryItem: "🤖 AI Jobs", URL: "#"},
+				{CategoryItem: "⏰ Async jobs", URL: "#"},
+				{CategoryItem: "🌎 Distributed team", URL: "#"},
+				{CategoryItem: "🎧 Support jobs", URL: "#"},
+				{CategoryItem: "🤓 Engineer jobs", URL: "#"},
+				{CategoryItem: "🤓 Software jobs", URL: "#"},
+				{CategoryItem: "👴 Senior jobs", URL: "#"},
+				{CategoryItem: "🛠️ Technical jobs", URL: "#"},
+				{CategoryItem: "💼 Management jobs", URL: "#"},
+				{CategoryItem: "🚀 Growth jobs", URL: "#"},
+				{CategoryItem: "🧑‍💼 Lead jobs", URL: "#"},
+			},
+		},
+		{Type: "divider"},
+		{
+			Type:  "section",
+			Title: "COMPANIES",
+			Items: []menu.MenuItem{
+				{CategoryItem: "📮 Post a remote job", URL: "#"},
+				{CategoryItem: "📦 Buy a job bundle", URL: "#"},
+				{CategoryItem: "🏷️ Ask for a discount", URL: "#"},
+				{CategoryItem: "🛡 Health insurance for teams", URL: "#"},
+				{CategoryItem: "🛡 Health insurance for noma...", URL: "#"},
+			},
+		},
+		{Type: "divider"},
+		{
+			Type:  "section",
+			Title: "FEEDS",
+			Items: []menu.MenuItem{
+				{CategoryItem: "🛠 Remote Jobs API", URL: "#"},
+				{CategoryItem: "🪄 RSS feed", URL: "#"},
+				{CategoryItem: "🪚 JSON feed", URL: "#"},
+				{CategoryItem: "🟧 Hacker News mode", URL: "#"},
+				{CategoryItem: "❌ Safe for work mode", URL: "#"},
+			},
+		},
+		{Type: "divider"},
+		{
+			Type:  "section",
+			Title: "HELP",
+			Items: []menu.MenuItem{
+				{CategoryItem: "💡 Ideas + bugs", URL: "#"},
+				{CategoryItem: "🚀 Changelog", URL: "#"},
+				{CategoryItem: "🛍️ Merch", URL: "#"},
+				{CategoryItem: "🛟 FAQ & Help", URL: "#"},
+			},
+		},
+	},
+	SearchMenu: []menu.MenuItem{
+		{CategoryItem: "🎧 Support", URL: "#"},
+		{CategoryItem: "🤓 Engineer", URL: "#"},
+		{CategoryItem: "🤓 Software", URL: "#"},
+		{CategoryItem: "👵 Senior", URL: "#"},
+		{CategoryItem: "🛠 Technical", URL: "#"},
+		{CategoryItem: "💼 Management", URL: "#"},
+		{CategoryItem: "🚀 Growth", URL: "#"},
+		{CategoryItem: "👩‍✈️ Lead", URL: "#"},
+		{CategoryItem: "🤓 Engineering", URL: "#"},
+		{CategoryItem: "🎨 Design", URL: "#"},
+		{CategoryItem: "💼 Manager", URL: "#"},
+		{CategoryItem: "💼 Sales", URL: "#"},
+		{CategoryItem: "💰 Financial", URL: "#"},
+		{CategoryItem: "🚥 Marketing", URL: "#"},
+	},
+	LocationMenu: []logo.LogoEntry{
+		{
+			Type:  "section",
+			Title: "REGIONS",
+			Items: []menu.MenuItem{
+				{CategoryItem: "🌍 Worldwide", URL: "#"},
+				{CategoryItem: "⛰️ North America", URL: "#"},
+				{CategoryItem: "💃 Latin America", URL: "#"},
+				{CategoryItem: "🇪🇺 Europe", URL: "#"},
+				{CategoryItem: "🦁 Africa", URL: "#"},
+				{CategoryItem: "🕌 Middle East", URL: "#"},
+				{CategoryItem: "⛩️ Asia", URL: "#"},
+				{CategoryItem: "🌊 Oceania", URL: "#"},
+			},
+		},
+		{Type: "divider"},
+		{
+			Type:  "section",
+			Title: "COUNTRIES",
+			Items: []menu.MenuItem{
+				{CategoryItem: "🇺🇸 United States", URL: "#"},
+				{CategoryItem: "🇨🇦 Canada", URL: "#"},
+				{CategoryItem: "🇬🇧 United Kingdom", URL: "#"},
+				{CategoryItem: "🇦🇺 Australia", URL: "#"},
+				{CategoryItem: "🇳🇿 New Zealand", URL: "#"},
+			},
+		},
+	},
+	SalaryMenu: salary.SalaryConfig{
+		Min:            0,
+		Max:            300,
+		Step:           1,
+		Value:          0,
+		CurrencyPrefix: "$",
+		CurrencySuffix: "k/year",
+	},
+	BenefitsMenu: []menu.MenuItem{
+		{CategoryItem: "💰 401(k)", URL: "#"},
+		{CategoryItem: "🌍 Distributed team", URL: "#"},
+		{CategoryItem: "⏰ Async", URL: "#"},
+		{CategoryItem: "🤓 Vision insurance", URL: "#"},
+		{CategoryItem: "🦷 Dental insurance", URL: "#"},
+		{CategoryItem: "🚑 Medical insurance", URL: "#"},
+		{CategoryItem: "🏖️ Unlimited vacation", URL: "#"},
+		{CategoryItem: "🏖️ Paid time off", URL: "#"},
+		{CategoryItem: "📅 4 day workweek", URL: "#"},
+		{CategoryItem: "💰 401k matching", URL: "#"},
+		{CategoryItem: "⛰️ Company retreats", URL: "#"},
+		{CategoryItem: "🏢 Coworking budget", URL: "#"},
+		{CategoryItem: "📚 Learning budget", URL: "#"},
+		{CategoryItem: "💪 Free gym membership", URL: "#"},
+	},
+	SortMenu: []menu.MenuItem{
+		{CategoryItem: "🦴 Sort by", URL: "#", Default: true},
+		{CategoryItem: "🆕 Latest jobs", URL: "#"},
+		{CategoryItem: "💵 Highest paid", URL: "#"},
+		{CategoryItem: "👀 Most viewed", URL: "#"},
+		{CategoryItem: "✅ Most applied", URL: "#"},
+		{CategoryItem: "🔥 Hottest", URL: "#"},
+		{CategoryItem: "🎪 Most benefits", URL: "#"},
+	},
+	Categories: []menu.MenuItem{
+		{CategoryItem: "🎧 Support"},
+		{CategoryItem: "🤓 Engineer"},
+		{CategoryItem: "🤓 Software"},
+		{CategoryItem: "👵 Senior"},
+		{CategoryItem: "🛠 Technical"},
+		{CategoryItem: "💼 Management"},
+		{CategoryItem: "🚀 Growth"},
+		{CategoryItem: "👩‍✈️ Lead"},
+	},
+}

@@ -1,0 +1,65 @@
+package store
+
+import "backend/model/postJob"
+
+var PostjobJobDetailsData = postJob.JobDetails{
+	Legend: "JOB DETAILS",
+	LogoUpload: postJob.LogoUpload{
+		Label:      "COMPANY LOGO (.JPG OR .PNG, SQUARE OR ROUND)",
+		ButtonText: "💾 Upload",
+	},
+	BrandColor: postJob.BrandColorOption{
+		Name:    "highlight_brand_color",
+		Text:    "Highlight with your company's 🌈 brand color (+$499) 👉",
+		Badge:   "3X MORE VIEWS",
+		Checked: false,
+		Price:   499,
+	},
+	Salary: postJob.SalaryField{
+		Label:          "ANNUAL SALARY OR COMPENSATION IN USD (GROSS, ANNUALIZED, FULL-TIME-EQUIVALENT (FTE) IN USD EQUIVALENT)*",
+		Min:            10000,
+		Max:            750000,
+		Step:           10000,
+		MinPlaceholder: "Minimum per year",
+		MaxPlaceholder: "Maximum per year",
+		HelpText:       "It's illegal to not share salary range on job posts since 2021. Posts without salary will automatically show an estimate of salary based on similar jobs. Remote job postings are legally required to show a salary compensation range in many U.S. states and countries. Google does NOT index jobs without salary data. If it's a short-term gig, use the annual full-time equivalent. For example, if it's a 2-week project for $2,000, the annual equivalent would be $2,000 / 2 weeks * 52 weeks = $52,000. Please use USD equivalent. We don't have currency built-in yet, and we'd like to use this salary data to show salary trends in remote work. Remote OK is a supporter of #OpenSalaries.",
+	},
+	Benefits: []string{
+		"💰 401(k)",
+		"🌎 Distributed team",
+		"⏰ Async",
+		"🤓 Vision insurance",
+		"🦷 Dental insurance",
+		"🚑 Medical insurance",
+		"🏖️ Unlimited vacation",
+		"🏖️ Paid time off",
+		"📆 4-day workweek",
+		"💰 401k matching",
+		"🏔 Company retreats",
+		"🏬 Coworking budget",
+		"📚 Learning budget",
+		"💪 Free gym membership",
+		"🧘 Mental wellness budget",
+		"🖥️ Home office budget",
+		"🥧 Pay in crypto",
+		"🥸 Pseudonymous",
+		"💰 Profit sharing",
+		"💰 Equity compensation",
+		"⬜️ No whiteboard interview",
+		"👀 No monitoring system",
+		"🚫 No politics at work",
+		"🎅 We hire old (and young)",
+	},
+	ApplyUrl: postJob.ApplyField{
+		Label:       "APPLY URL",
+		Placeholder: "https://... or jobs@company.com",
+		Required:    true,
+		HelpText:    "The URL or email address where applicants can apply for this job post.",
+	},
+	ApplyEmail: postJob.ApplyField{
+		Label:       "APPLY EMAIL ADDRESS",
+		Placeholder: "https://... or jobs@company.com",
+		Required:    true,
+		HelpText:    "Apply email address This email is public (!), the [ Apply ] button links to it if you do not specify an Apply URL above. We recommend using an Apply URL, instead of an Apply Email Address, because you might get a lot of spam/automated applicants by email.",
+	},
+}

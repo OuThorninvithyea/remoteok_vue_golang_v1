@@ -1,0 +1,21 @@
+import { ref, onMounted } from 'vue'
+import axios from 'axios'
+
+export function useLogo() {
+    const logo = ref(null)
+    const loading = ref(true)
+    const error = ref(null)
+
+    onMounted(async () => {
+        try {
+            const res = await axios.get('/api/home/logo')
+            logo.value = res.data
+        } catch (e) {
+            error.value = e.message
+        } finally {
+            loading.value = false
+        }
+    })
+
+    return { logo, loading, error }
+}
